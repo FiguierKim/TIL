@@ -9,6 +9,8 @@
 3. Repository default branch 변경 (settings -> repositories)
    - main -> master로 변경
 
+![Screen Shot 2021-06-14 at 9.40.06 PM](01_github.assets/Screen Shot 2021-06-14 at 9.40.06 PM.png)
+
 <br>
 
 ## 명령어
@@ -28,15 +30,17 @@ $ git remote add origin 저장소URL
 ## 원격 저장소 목록 보기
 
 ```bash
-$git remote -v
+$ git remote -v
 origin	git@github.com:FiguierKim/TIL.git (fetch) #ssh로 설정한 경우
 origin	git@github.com:FiguierKim/TIL.git (push)
 ```
 
->잘못 저장한 경우 삭제하는 법
+>잘못 add 경우 삭제하는 법
 ```bash
-$git remote rm
+$ git remote rm origin
 ```
+
+<br>
 
 ## 원격 저장소에 업로드(push)
 
@@ -56,4 +60,28 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 > **원격 저장소에는 commit이 올라간다.**
 >
 > 즉, commit 이력이 없으면 push 할 수 없다.
+
+<br>
+
+## pull
+
+- 원격 저장소의 변경사항을 받아옴(업데이트)
+
+```bash
+$ git pull origin master
+```
+
+<br>
+
+## clone
+
+- 원격 저장소 전체를 복제
+
+```bash
+$ git clone 저장소URL
+```
+
+> [주의사항]
+>
+> clone 받은 프로젝트는 이미 `git init` 이 되어있다.(`remote` 도 추가되어 있다)
 
